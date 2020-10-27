@@ -248,6 +248,11 @@ BLOG
     position: relative;
 }
 
+.gallery .pic-wrapper .date-wrapper {
+    position: relative;
+}
+
+
 
 
 
@@ -264,6 +269,7 @@ BLOG
     width: 100%;
     height: 100%;
     margin: 0;
+    display: block;
 
 }
 
@@ -330,6 +336,10 @@ BLOG
 }
 
 .gallery .pic-wrapper .date {
+    position: absolute;
+    bottom: -25px;
+    right: 30px;
+    z-index: 15;
     width: 44px;
     height: 49px;
     background-color: #ff724c;
@@ -354,12 +364,7 @@ BLOG
     font-weight: 300;
 }
 
-.gallery .pic-wrapper .date {
-    position: absolute;
-    bottom: 95px;
-    right: 30px;
-    z-index: 15;
-}
+
 
 .gallery .pic-wrapper .under-pic-info p {
     font-size: 13px;
@@ -511,74 +516,10 @@ RESUME
 
 }
 
-.in-resume .in-resume-wrapper .skills .bar-title .skill-bar-container .skill-bar-a {
+.skill-bar-container .skill-bar {
     background-color: #ff724c;
     border: 1px solid #ffffff;
     height: 10px;
     padding: 0;
     display: block;
-    width: 88%;
-}
-
-.in-resume .in-resume-wrapper .skills .bar-title .skill-bar-container .skill-bar-b {
-    background-color: #ff724c;
-    border: 1px solid #ffffff;
-    height: 10px;
-    padding: 0;
-    display: block;
-    width: 70%;
-}
-
-.in-resume .in-resume-wrapper .skills .bar-title .skill-bar-container .skill-bar-c {
-    background-color: #ff724c;
-    border: 1px solid #ffffff;
-    height: 10px;
-    padding: 0;
-    display: block;
-    width: 65%;
-}
-
-.in-resume .in-resume-wrapper .skills .bar-title .skill-bar-container .skill-bar-d {
-    background-color: #ff724c;
-    border: 1px solid #ffffff;
-    height: 10px;
-    padding: 0;
-    display: block;
-    width: 96%;
-}
-
-.in-resume .in-resume-wrapper .skills .bar-title .skill-bar-container .skill-bar-e {
-    background-color: #ff724c;
-    border: 1px solid #ffffff;
-    height: 10px;
-    padding: 0;
-    display: block;
-    width: 80%;
-}
-
-.in-resume .in-resume-wrapper .skills .bar-title .skill-bar-container .skill-bar-f {
-    background-color: #ff724c;
-    border: 1px solid #ffffff;
-    height: 10px;
-    padding: 0;
-    display: block;
-    width: 66%;
-}
-
-.in-resume .in-resume-wrapper .skills .bar-title .skill-bar-container .skill-bar-g {
-    background-color: #ff724c;
-    border: 1px solid #ffffff;
-    height: 10px;
-    padding: 0;
-    display: block;
-    width: 55%;
-}
-
-.in-resume .in-resume-wrapper .skills .bar-title .skill-bar-container .skill-bar-h {
-    background-color: #ff724c;
-    border: 1px solid #ffffff;
-    height: 10px;
-    padding: 0;
-    display: block;
-    width: 70%;
 }
