@@ -15,6 +15,8 @@ main {
     padding: 0 0 0 150px;
 }
 
+
+
 .container {
     background-color: #ffffff;
     max-width: 1170px;
@@ -70,6 +72,25 @@ h3 {
     margin: 0 0 20px;
     border-left: 2px solid #ff724c;
     padding-left: 15px;
+}
+
+
+
+@media(max-width:1000px) {
+    main {
+        padding: 15px;
+    }
+
+    .main-header h2 {
+        font-size: 38px;
+    }
+}
+
+@media(max-width:500px) {
+    .main-header h2 {
+        font-size: 26px;
+    }
+
 }
 
 /*******************************************************************
@@ -158,6 +179,140 @@ NAVIGATION
     opacity: 1;
 }
 
+.nav .hamburger {
+    width: 32px;
+    height: 32px;
+    background-color: transparent;
+    border: none;
+    position: relative;
+    display: none;
+    outline: none;
+}
+
+.nav .hamburger span {
+    display: block;
+    height: 4px;
+    width: 100%;
+    background-color: #ff724c;
+    position: absolute;
+
+}
+
+.nav .hamburger span:nth-of-type(1) {
+    top: 0;
+    left: 0;
+}
+
+.nav .hamburger span:nth-of-type(2) {
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.nav .hamburger span:nth-of-type(3) {
+    bottom: 0;
+    left: 0;
+}
+
+.nav .hamburger.active span:nth-of-type(2) {
+    display: none;
+}
+
+.nav .hamburger.active span:nth-of-type(1) {
+    transform: rotate(45deg);
+    top: 50%;
+}
+
+.nav .hamburger.active span:nth-of-type(3) {
+    transform: rotate(-45deg);
+    top: 50%;
+}
+
+
+
+
+
+
+@media(max-width:1000px) {
+    .me {
+        display: flex;
+        align-items: center;
+
+    }
+
+    .nav {
+        width: 100%;
+        height: 100px;
+        padding: 15px;
+        z-index: 15;
+        transition: 0.5s;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .nav.small {
+        height: 70px;
+    }
+
+    .nav .menu {
+        display: none;
+    }
+
+    .nav .me .my-name {
+        margin: 0;
+        font-size: 16px;
+
+    }
+
+    .nav .my-photo {
+        padding: 0;
+        margin: 0 15px 0 0;
+    }
+
+    .nav .my-photo img {
+        height: 70px;
+        width: auto;
+        transition: 0.5s;
+
+    }
+
+    .nav.small .my-photo img {
+        height: 40px;
+
+    }
+
+    .nav .hamburger {
+        display: block;
+        /* position: relative;
+        z-index: 10; */
+    }
+
+
+    /* .nav.menu-open .menu {
+        display: flex;
+        position: fixed;
+        z-index: 3;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-top: 70px;
+        background-color: #fff;
+        top: 0;
+        left: 0;
+    } */
+
+}
+
+
+
+
+
+
+
+
 /******************************************************************
 NAME SECTION
 *******************************************************************/
@@ -193,6 +348,7 @@ SECTION ABOUT ME
 .personal-info {
     display: flex;
     margin: 0 -15px;
+    flex-wrap: wrap;
 }
 
 .personal-info .picture,
@@ -319,6 +475,51 @@ SECTION ABOUT ME
     color: #ff724c;
     font-style: italic;
     margin: 0;
+}
+
+/* .personal-info .picture,
+.personal-info .info,
+.personal-info .data {
+    width: calc(100%/3);
+    padding: 0 15px;
+} */
+
+
+@media(max-width: 1000px) {
+
+    .personal-info .picture {
+        width: 50%;
+        order: 1;
+    }
+
+    .personal-info .data {
+        width: 50%;
+        order: 2;
+    }
+
+    .personal-info .info {
+        width: 100%;
+        order: 3;
+        margin: 30px 0 0 0;
+    }
+
+}
+
+@media(max-width: 600px) {
+
+    .personal-info .picture {
+        width: 100%;
+        margin: 0 0 30px 0;
+
+    }
+
+    .personal-info .data {
+        width: 100%;
+
+    }
+
+
+
 }
 
 
