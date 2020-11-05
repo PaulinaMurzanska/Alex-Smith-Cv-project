@@ -142,7 +142,6 @@ NAVIGATION
     padding: 10px 0;
     color: #222222;
     opacity: 0.7;
-
     border-top: 1px solid rgba(58, 53, 53, 0.3);
     position: relative;
 }
@@ -1138,12 +1137,22 @@ CONTACT
         height: auto;
         display: flex;
         flex-direction: column;
-        padding: 0 15px 0 0;
+        padding: 0;
         margin-bottom: 20px;
 
     }
 
+
+
+    .map {
+        width: 100%;
+    }
+
 }
+
+
+
+
 
 
 
@@ -1155,15 +1164,6 @@ CONTACT FORM
     width: 50%;
 }
 
-.form span {
-    font-size: 13px;
-    color: #bbbbbb;
-}
-
-.form i {
-    font-size: 18px;
-    color: #bbbbbb;
-}
 
 .form .form-name {
     width: 100%;
@@ -1174,7 +1174,83 @@ CONTACT FORM
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+
 }
+
+.form .form-name::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: #ff724c;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+}
+
+.form .form-name:hover::after {
+    width: 100%;
+    transition: .5s;
+}
+
+.form i {
+    font-size: 18px;
+    color: #bbbbbb;
+}
+
+input[type="text"] {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+input[type="text"]:focus {
+    outline: none;
+
+}
+
+input[type="text"]::placeholder {
+    font-size: 13px;
+    color: #bbbbbb;
+}
+
+.form .form-email::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: #ff724c;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+}
+
+.form .form-email:hover::after {
+    width: 100%;
+    transition: .5s;
+}
+
+
+
+
+input[type="email"] {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+input[type="email"]:focus {
+    outline: none;
+
+}
+
+input[type="email"]::placeholder {
+    font-size: 13px;
+    color: #bbbbbb;
+}
+
+
 
 .form .form-email {
     width: 100%;
@@ -1185,17 +1261,55 @@ CONTACT FORM
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
-.form .form-message {
+.form-message {
     width: 100%;
-    height: 130px;
-    border: 1px solid #bbbbbb;
-    padding: 10px 15px 0 15px;
-    display: flex;
-    justify-content: space-between;
+    height: auto;
+    position: relative;
 
 }
+
+textarea {
+    width: 100%;
+    padding: 5px 10px;
+    border: 1px solid #bbbbbb;
+    min-height: 150px;
+    resize: vertical;
+    font-size: 14px;
+    color: #bbbbbb;
+    padding: 15px 0 0 15px;
+}
+
+.form-message::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: #ff724c;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+}
+
+.form-message:hover::after {
+    width: 100%;
+    transition: .5s;
+}
+
+textarea:focus {
+    outline: none;
+    position: relative;
+}
+
+
+.form-message i {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+
 
 .form .gdrp {
     margin: 20px 0 0 0;
@@ -1282,6 +1396,7 @@ CONTACT FORM
 @media(max-width:700px) {
     .form {
         padding: 0;
+        width: 100%;
     }
 
 }
@@ -1385,6 +1500,7 @@ EXTRA
     margin: 10px 0;
 
 }
+
 
 @media(max-width:700px) {
     .extra .pricing .plans .plan-wrap {

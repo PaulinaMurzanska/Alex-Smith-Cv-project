@@ -27,6 +27,5 @@ hamburger.addEventListener("click", function () {
 
     navigation.classList.toggle("menu-open");
 
-
-
 })
+
