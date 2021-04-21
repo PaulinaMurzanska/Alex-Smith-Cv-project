@@ -28,4 +28,5 @@ hamburger.addEventListener("click", function () {
     navigation.classList.toggle("menu-open");
 
 })
-
+AOS.init();
+console.log(document.body)
